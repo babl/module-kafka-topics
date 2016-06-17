@@ -1,10 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 
-if [ ! -t 0 ]; then
-  read name
-  if [ -z $name ]; then
-    unset name
-  fi
-fi
-
-echo Hello ${name-World}
+$KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper $ZOOKEEPER --replication-factor $REPLICATION_FACTOR --partition $PARTITIONS --topic $TOPIC
