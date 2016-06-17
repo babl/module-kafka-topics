@@ -1,1 +1,7 @@
 id: babl/kafka-topics
+mem: 256
+container:
+  docker:
+    parameters:
+      - key: net
+        value: admin
