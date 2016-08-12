@@ -16,6 +16,7 @@ case $ACTION in
     $KAFKA_HOME/bin/kafka-topics.sh --$ACTION --zookeeper $ZOOKEEPER --partition $PARTITIONS --topic $TOPIC
     ;;
   delete)
+  describe)
     $KAFKA_HOME/bin/kafka-topics.sh --$ACTION --zookeeper $ZOOKEEPER --topic $TOPIC
     ;;
   list)
