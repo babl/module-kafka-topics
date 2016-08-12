@@ -18,6 +18,9 @@ case $ACTION in
   delete)
     $KAFKA_HOME/bin/kafka-topics.sh --$ACTION --zookeeper $ZOOKEEPER --topic $TOPIC
     ;;
+  list)
+    $KAFKA_HOME/bin/kafka-topics.sh --$ACTION --zookeeper $ZOOKEEPER
+    ;;
   *)
-    echo unknown action $ACTION
+    echo unknown action $ACTION, possible options: create/alter/delete/list
 esac
